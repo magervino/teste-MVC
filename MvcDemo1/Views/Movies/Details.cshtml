@@ -1,0 +1,30 @@
+﻿@model MvcDemo1.Models.MovieDB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>MovieDB</legend>
+
+    <div class="display-label">title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">director</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.director)
+    </div>
+
+    <div class="display-label">date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
